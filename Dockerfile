@@ -4,11 +4,10 @@ FROM python:3.13-slim
 # Set working directory inside the container
 WORKDIR /app
 
-# Install system dependencies if needed
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
-    software-properties-common \
     git \
     && rm -rf /var/lib/apt/lists/*
 
